@@ -1,21 +1,19 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
+import TodoItem from './components/TodoItem'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-
-
     <div className="App">
         <h1> Todos</h1>
         <h2> items will persist in the local browser storage  </h2>
         <ul>
-            inputs items here
-            <li> Set up develop enviroment</li>
-            <li>Develop website and add content</li>
-            <li>Deploy to live server</li>
+             Items here
+             <TodoItem title="Set up develop enviroment" />
+             <TodoItem title="Develop website and add content" />
+             <TodoItem title="Deploy to live server" />
         </ul>
     </div>
   )
