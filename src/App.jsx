@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import TodoItem from './components/TodoItem'
+import TodosLogic from './components/TodosLogic';
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,12 +10,8 @@ function App() {
     <div className="App">
         <h1> Todos</h1>
         <h2> items will persist in the local browser storage  </h2>
-        <ul>
-             Items here
-             <TodoItem title="Set up develop enviroment" />
-             <TodoItem title="Develop website and add content" />
-             <TodoItem title="Deploy to live server" />
-        </ul>
+
+        <TodosLogic />
     </div>
   )
 }
