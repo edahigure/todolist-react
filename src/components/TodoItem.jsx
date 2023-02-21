@@ -1,4 +1,4 @@
-const TodoItem = ({ itemProp, handleChange }) => {
+const TodoItem = ({ itemProp, handleChange, delTodo}) => {
 
     return (
         <li>
@@ -7,6 +7,7 @@ const TodoItem = ({ itemProp, handleChange }) => {
                 checked={itemProp.completed}
                 onChange={() => handleChange(itemProp.id)}
             />
+            <button onClick={() => delTodo(itemProp.id)}>Delete</button>
             {itemProp.title}
         </li>
     );
